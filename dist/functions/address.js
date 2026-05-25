@@ -183,6 +183,7 @@ module.exports = function (S) {
       return checksum.equals(verifyChecksum);
     } else {
       var prefix, payload;
+      if (address !== address.toLowerCase() && address !== address.toUpperCase()) return false;
 
       if ([S.TESTNET_SEGWIT_ADDRESS_PREFIX, S.MAINNET_SEGWIT_ADDRESS_PREFIX].includes(address.split("1")[0].toLowerCase())) {
         if (address.length !== 43 && address.length !== 63 && address.length !== 44 && address.length !== 64) return false;
