@@ -845,6 +845,8 @@ describe(`${(browser) ? 'Browser' : 'Node'} test jsbgl library`, function () {
             equal(isAddressValid("BGL1QW508D6QEJXTDG4Y5R3ZARVARY0C5XW7K0FY5A3"), true);
             equal(isAddressValid("Bgl1QW508D6QEJXTDG4Y5R3ZARVARY0C5XW7K0FY5A3"), false);
             equal(isAddressValid("tbgl1qw508d6qejxtdg4y5r3zarvary0c5xw7kxpjzsx", {testnet: true}), true);
+            equal(isAddressValid("TBGL1QW508D6QEJXTDG4Y5R3ZARVARY0C5XW7KXPJZSX", {testnet: true}), true);
+            equal(isAddressValid("Tbgl1QW508D6QEJXTDG4Y5R3ZARVARY0C5XW7KXPJZSX", {testnet: true}), false);
             equal(isAddressValid("tbgl1qw508d6qejxtdg4y5r3zarvary0c5xw7kxpjzsx"), false);
             // equal(isAddressValid("bc1qrp33g0q5c5txsp9arysrx4k6zdkfs4nce4xj0gdcccefvpysxf3qccfmv3"), true);
             // equal(isAddressValid("tb1qrp33g0q5c5txsp9arysrx4k6zdkfs4nce4xj0gdcccefvpysxf3q0sl5k7", {testnet: true}), true);
